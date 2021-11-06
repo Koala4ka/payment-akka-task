@@ -19,8 +19,12 @@ object App {
 
     val paymentController = new PaymentController(paymentService)
 
+
     val route = concat(
-      paymentController.createNewPaymentRoute
+      paymentController.createNewPaymentRoute,
+      paymentController.paymentIDRoute,
+      paymentController.paymentListRoute,
+      paymentController.StatisticByStatsRoute
     )
 
 
