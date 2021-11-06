@@ -59,6 +59,6 @@ class PaymentController(paymentService: PaymentService) {
 
   val StatisticByStatsRoute: Route =
     AkkaHttpServerInterpreter().toRoute(getStatisticByStats) { currency =>
-        Future.successful(paymentService.getStatisticsByStats(currency))
+      Future.successful(paymentService.getStatisticsByStats(currency))
     }
 }
